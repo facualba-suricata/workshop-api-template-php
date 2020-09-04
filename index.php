@@ -165,6 +165,4 @@
         </div>
     </body>
     
-    <script src="https://secure.mlstatic.com/sdk/javascript/v1/mercadopago.js"></script>
-
 </html>
