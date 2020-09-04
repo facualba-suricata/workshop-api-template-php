@@ -23,9 +23,6 @@ $payment->payer = $payer;
 
 $payment->save();
 
-var_dump($payment);
-exit;
-
 $response = array(
     'status' => $payment->status,
     'status_detail' => $payment->status_detail,
