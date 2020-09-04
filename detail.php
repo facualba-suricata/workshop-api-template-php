@@ -47,7 +47,7 @@
                                     <br>
                                     <!-- ADD PAYMENT FORM HERE -->
 
-                                    <form action="/process_payment" method="post" id="paymentForm">
+                                    <form action="/process_payment.php" method="post" id="paymentForm">
                                         <h3>Detalles del comprador</h3>
                                             <div>
                                             <div>
