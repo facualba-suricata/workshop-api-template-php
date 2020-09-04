@@ -168,6 +168,34 @@
             }
         }
 
+        function getIssuers(paymentMethodId) {
+        window.Mercadopago.getIssuers(
+            paymentMethodId,
+            setIssuers
+        );
+        }
+
+        function setIssuers(status, response) {
+        if (status == 200) {
+            let issuerSelect = document.getElementById('issuer');
+            response.forEach( issuer => {
+                let opt = document.createElement('option');
+                opt.text = issuer.name;
+                opt.value = issuer.id;
+                issuerSelect.appendChild(opt);
+            });
+
+            getInstallments(
+                document.getElementById('paymentMethodId').value,
+                document.getElementById('transactionAmount').value,
+                issuerSelect.value
+            );
+        } else {
+            alert(`issuers method info error: ${response}`);
+        }
+        }
+
+
         function getInstallments(paymentMethodId, transactionAmount, issuerId){
             window.Mercadopago.getInstallments({
                 "payment_method_id": paymentMethodId,
