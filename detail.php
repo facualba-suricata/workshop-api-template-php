@@ -133,4 +133,9 @@
     </body>
 
     <script src="https://secure.mlstatic.com/sdk/javascript/v1/mercadopago.js"></script>
+
+    <script>
+        window.Mercadopago.setPublishableKey("TEST-77ef4be1-f3fb-4681-91b6-5241f48d0327");
+        window.Mercadopago.getIdentificationTypes();
+    </script>
 </html>
