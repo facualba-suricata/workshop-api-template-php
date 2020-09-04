@@ -26,7 +26,8 @@ $payment->save();
 $response = array(
     'status' => $payment->status,
     'status_detail' => $payment->status_detail,
-    'id' => $payment->id
+    'id' => $payment->id,
+    'payment' => $payment
 );
 
 echo json_encode($response);
